@@ -1,0 +1,12 @@
+<h3>Create new Responses:</h3>
+
+<form action="/answers" method="post">
+  <label for="response">Answer</label>
+  <input id="response" name="response" type="text">
+
+  <button type="submit">Add Answer</button>
+</form>
+
+<% @question.answer().each() do |answer| %>
+    <li><%= answer.prompt %> <a href="/answer/<%= answer.id() %>/edit">Update this specific answer</a></li>
+  <% end %>

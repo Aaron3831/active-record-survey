@@ -1,0 +1,9 @@
+<h1><%= @question.name %></h1>
+
+<form action="/answer/<%= @question.id %>" method="post">
+
+  <label for="prompt">Add answer to question:</label>
+  <input name="prompt" type="text">
+
+  <button type="submit">Update</button>
+</form>

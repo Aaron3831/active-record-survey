@@ -1,0 +1,20 @@
+<h1>Survey Designer</h1>
+
+<h3>Create a new Survey:</h3>
+
+<form action="/designer" method="post">
+  <label for="prompt">Survey</label>
+  <input id="prompt" name="prompt" type="text">
+
+  <button type="submit">Add Survey</button>
+</form>
+
+<ul>
+  <% @questions.each() do |question| %>
+    <li><a href="/questions/<%= question.id()%>"><%= question.prompt() %></a> </li>
+  <% end %>
+</ul>
+
+<p><a href="/view_answers" >View Survey Answers</a></p>
+
+<p><a href="/" >Home</a></p>
