@@ -7,6 +7,6 @@
   <button type="submit">Add Answer</button>
 </form>
 
-<% @question.answer().each() do |answer| %>
-    <li><%= answer.prompt %> <a href="/answer/<%= answer.id() %>/edit">Update this specific answer</a></li>
+<% @questions.each() do |answer| %>
+    <li><%= answer.response %> <a href="/answer/<%= answer.id() %>/edit">Update this specific answer</a></li>
   <% end %>
